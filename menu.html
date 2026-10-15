@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Productos | Élan Veterinaria - Pet Shop</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .pet-card{border-radius:22px!important; border:1px solid #E8F9F7; background:#fff; overflow:hidden; transition:.4s; box-shadow:0 8px 25px rgba(15,44,62,.06); height:100%;}
+        .pet-card:hover{transform:translateY(-10px); box-shadow:0 18px 40px rgba(20,184,166,.18); border-color:var(--primary);}
+        .pet-card img{height:220px; width:100%; object-fit:cover; transition:.4s;}
+        .pet-card:hover img{transform:scale(1.05);}
+        .pet-badge{position:absolute; top:12px; left:12px; background:#fff; color:var(--dark); font-weight:800; font-size:11px; padding:6px 12px; border-radius:50px; letter-spacing:.5px; box-shadow:0 3px 10px rgba(0,0,0,.1);}
+        .pet-badge.dog{background:#FFC857; color:#0F2C3E;}
+        .pet-badge.cat{background:#14B8A6; color:#fff;}
+        .pet-badge.bird{background:#60A5FA; color:#fff;}
+        .pet-badge.small{background:#F472B6; color:#fff;}
+        .pet-badge.reptile{background:#A3E635; color:#0F2C3E;}
+        .pet-price{font-family:'Nunito'; font-weight:800; color:var(--primary); font-size:20px;}
+        .nav-pills .nav-link.active{background:var(--primary)!important; color:#fff!important; border-radius:50px; box-shadow:0 6px 20px rgba(20,184,166,.3);}
+    </style>
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"><div class="spinner-border text-primary" style="width: 3rem; height: 3rem;"></div></div>
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0"><h1 class="text-primary m-0"><i class="fa fa-paw me-3"></i>Élan Veterinaria</h1></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span class="fa fa-bars"></span></button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0 pe-4">
+                        <a href="index.html" class="nav-item nav-link">Inicio</a>
+                        <a href="about.html" class="nav-item nav-link">Nosotros</a>
+                        <a href="service.html" class="nav-item nav-link">Servicios</a>
+                        <a href="menu.html" class="nav-item nav-link active">Productos</a>
+                        <div class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Más</a><div class="dropdown-menu m-0"><a href="booking.html" class="dropdown-item">Agendar Cita</a><a href="team.html" class="dropdown-item">Nuestro Equipo</a><a href="testimonial.html" class="dropdown-item">Testimonios</a></div></div>
+                        <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                    </div>
+                    <a href="booking.html" class="btn btn-primary py-2 px-4">Agenda una Cita</a>
+                </div>
+            </nav>
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Pet Shop Élan</h1>
+                    <p class="text-white-50">Para perros, gatos, conejos, aves y más amiguitos</p>
+                    <nav aria-label="breadcrumb"><ol class="breadcrumb justify-content-center text-uppercase"><li class="breadcrumb-item"><a href="index.html">Inicio</a></li><li class="breadcrumb-item text-white active">Productos</li></ol></nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Nuestra Tienda</h5>
+                    <h1 class="mb-5">Todo para tu mascota <i class="fa fa-heart text-primary"></i></h1>
+                </div>
+                <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 p-2" style="background:var(--accent); border-radius:50px;">
+                        <li class="nav-item"><a class="d-flex align-items-center mx-2 px-4 py-2 active" data-bs-toggle="pill" href="#tab-1"><i class="fa fa-bone me-2 text-primary"></i> Alimentos</a></li>
+                        <li class="nav-item"><a class="d-flex align-items-center mx-2 px-4 py-2" data-bs-toggle="pill" href="#tab-2"><i class="fa fa-pills me-2 text-primary"></i> Salud</a></li>
+                        <li class="nav-item"><a class="d-flex align-items-center mx-2 px-4 py-2" data-bs-toggle="pill" href="#tab-3"><i class="fa fa-basketball-ball me-2 text-primary"></i> Accesorios</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <!-- ALIMENTOS PARA TODOS -->
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/rufo.jpg"><span class="pet-badge dog"><i class="fa fa-dog me-1"></i> PERRO</span></div><div class="p-4 text-start"><h5>Alimento Premium Perro Adulto 15kg</h5><p class="small text-muted">Fórmula alta en proteína con omega 3 y 6, ideal para mantener energía, pelaje brillante y digestión saludable en perros adultos de todas las razas.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 1,850</span><a href="https://wa.me/50498567868?text=Quiero%20Alimento%20Perro%20Adulto" class="btn btn-primary btn-sm rounded-pill px-3">Pedir <i class="fab fa-whatsapp ms-1"></i></a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/gato.png"><span class="pet-badge cat"><i class="fa fa-cat me-1"></i> GATO</span></div><div class="p-4 text-start"><h5>Alimento Gato 7.5kg</h5><p class="small text-muted">Control de bolas de pelo, salud urinaria y peso ideal para gatitos de casa. Con taurina y fibra natural para michis felices y activos.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 1,250</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/heno.avif"><span class="pet-badge small"><i class="fa fa-paw me-1"></i> CONEJO</span></div><div class="p-4 text-start"><h5>Conejina Premium + Heno </h5><p class="small text-muted">Mezcla balanceada con heno, pellets fortificados y vegetales deshidratados. Favorece desgaste dental y digestión de conejos y cobayas.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 480</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/mixtura.jpg"><span class="pet-badge bird"><i class="fa fa-dove me-1"></i> AVES</span></div><div class="p-4 text-start"><h5>Mixtura Premium para Pericos y Canarios</h5><p class="small text-muted">Semillas seleccionadas con vitaminas, calcio y frutas deshidratadas. Plumaje más brillante, canto activo y huesos fuertes para tus aves.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 220</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/hamster.avif"><span class="pet-badge small"> HAMSTER</span></div><div class="p-4 text-start"><h5>Alimento Hámster y Cuyos Mix 1kg</h5><p class="small text-muted">Granos, maní, girasol y pellets vitaminados. Nutrición completa para roedores pequeños, evita obesidad y mantiene dientecitos sanos.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 180</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/stick.jpg"><span class="pet-badge reptile"> TORTUGA</span></div><div class="p-4 text-start"><h5>Sticks Flotantes para Tortuga Acuática</h5><p class="small text-muted">Rico en calcio y vitamina D3, fortalece caparazón y estimula apetito. No ensucia el agua, ideal para tortugas y peces koi.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 195</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                            </div>
+                        </div>
+
+                        <!-- SALUD -->
+                        <div id="tab-2" class="tab-pane fade p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/nex.jpg"><span class="pet-badge dog"> ANTIPULGAS</span></div><div class="p-4 text-start"><h5>NexGard Spectra - Perros y Gatos</h5><p class="small text-muted">Una sola tableta masticable protege 1 mes contra pulgas, garrapatas, sarna y parásitos intestinales. Sabor a carne, fácil de dar.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 550</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/shampoo.png"><span class="pet-badge cat"> PIEL</span></div><div class="p-4 text-start"><h5>Shampoo Medicado Antialérgico </h5><p class="small text-muted">Para perros, gatos, conejos con piel sensible. Alivia picazón, caída excesiva y mal olor. Con extractos naturales.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 320</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/vitaminas.png"><span class="pet-badge small"> VITAMINAS</span></div><div class="p-4 text-start"><h5>Vitaminas + Calcio + Omega para todas las especies</h5><p class="small text-muted">Suplemento líquido. Fortalece huesos, mejora pelaje/plumas, aumenta defensas. Ideal para cachorros, aves en muda y conejos.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 280</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/desparasitantee.jpg"><span class="pet-badge bird"> AVES Y ROEDORES</span></div><div class="p-4 text-start"><h5>Desparasitante en Gotas para Aves y Hámster</h5><p class="small text-muted">Elimina ácaros, piojillos y parásitos internos. Se aplica en agua. Seguro para pericos, canarios, conejos y cuyes.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 150</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                            </div>
+                        </div>
+
+                        <!-- ACCESORIOS PARA TODOS -->
+                        <div id="tab-3" class="tab-pane fade p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/cama.jpg"><span class="pet-badge dog"> DESCANSO</span></div><div class="p-4 text-start"><h5>Cama Acolchonada Antiestrés</h5><p class="small text-muted">Super suave, lavable y con borde alto para que perros, gatos y conejos se sientan seguros. Perfecta para ansiosos y friolentos.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 850</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/tunel.jpg"><span class="pet-badge cat"> JUGUETES</span></div><div class="p-4 text-start"><h5>Túnel + Juguetes Interactivos para Gatos y Hurones</h5><p class="small text-muted">Túnel plegable con ratoncitos y plumas. Estimula caza, ejercicio y reduce estrés en gatos, hurones y conejos curiosos.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 420</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/jaula.jpg"><span class="pet-badge bird"> JAULA AVES</span></div><div class="p-4 text-start"><h5>Jaula Amplia con Comederos para Pericos</h5><p class="small text-muted">Barrotes seguros, base extraíble fácil de limpiar. Incluye columpio y bebedero. Ideal para periquitos, canarios y ninfas.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 1,200</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/sustrato.jpg"><span class="pet-badge small"> CONEJOS</span></div><div class="p-4 text-start"><h5>Esquinero + Sustrato Ecológico para Conejo</h5><p class="small text-muted">Entrena a tu conejo a hacer en un solo lugar. Sustrato absorbente que neutraliza olores, biodegradable y seguro si lo muerde.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 380</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/correa.jpg"><span class="pet-badge dog"> PASEO</span></div><div class="p-4 text-start"><h5>Correa + Pechera Reflectiva Ajustable</h5><p class="small text-muted">Seguridad nocturna, no lastima el cuello. Disponible para perro pequeño a grande y también para gatos aventureros.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 450</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                                <div class="col-lg-4 col-md-6"><div class="pet-card"><div class="position-relative"><img src="img/lampara.jpg"><span class="pet-badge reptile"> TERRARIO</span></div><div class="p-4 text-start"><h5>Kit Terrario + Lámpara Calor para Tortugas e Iguanas</h5><p class="small text-muted">Incluye termómetro, roca calefactora y calcio. Crea el hábitat perfecto para reptiles, mantiene temperatura ideal.</p><div class="d-flex justify-content-between align-items-center mt-3"><span class="pet-price">L. 1,650</span><a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Pedir</a></div></div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5"><div class="row g-5"><div class="col-lg-3 col-md-6"><h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Élan</h4><a class="btn btn-link" href="about.html">Sobre Nosotros</a><a class="btn btn-link" href="contact.html">Contacto</a><a class="btn btn-link" href="booking.html">Reserva Cita</a></div><div class="col-lg-3 col-md-6"><h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contacto Directo</h4><p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Santa Cruz de Yojoa, Cortés, Honduras</p><p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+504 9996-2071</p><p class="mb-2"><i class="fa fa-envelope me-3"></i>elanveterinaria@gmail.com</p></div><div class="col-lg-3 col-md-6"><h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Horario</h4><h5 class="text-light fw-normal">Lunes - Sábado</h5><p>08AM - 06PM</p><h5 class="text-light fw-normal">Domingo</h5><p>09AM - 03PM (Solo Emergencias)</p></div><div class="col-lg-3 col-md-6"><h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Consejos</h4><p>Recibe tips y promociones.</p><div class="position-relative mx-auto" style="max-width: 400px;"><input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Tu email"><button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Enviar</button></div></div></div></div>
+            <div class="container"><div class="copyright"><div class="row"><div class="col-md-6 text-center text-md-start mb-3 mb-md-0">&copy; <a class="border-bottom" href="#">Élan Veterinaria</a>, Todos los Derechos Reservados.</div><div class="col-md-6 text-center text-md-end"><div class="footer-menu"><a href="index.html">Inicio</a><a href="booking.html">Citas</a></div></div></div></div></div>
+        </div>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="js/main.js"></script>
+    <audio id="bgMusic" loop preload="auto"><source src="video/audio.mpeg" type="audio/mpeg"><source src="video/audio.mp3" type="audio/mpeg"></audio>
+    <button id="musicBtn" class="music-float-btn" title="Silenciar música"><i id="musicIcon" class="fa fa-volume-mute"></i></button>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const music = document.getElementById('bgMusic'); const btn = document.getElementById('musicBtn'); const icon = document.getElementById('musicIcon');
+        music.volume = 0.25; let isMuted = localStorage.getItem('elanMusicMuted') === 'true';
+        function updateButton() { if (music.muted || isMuted) { icon.className = 'fa fa-volume-mute'; btn.classList.add('muted'); btn.classList.remove('playing'); } else { icon.className = 'fa fa-volume-up'; btn.classList.remove('muted'); btn.classList.add('playing'); } }
+        function tryPlay() { if(isMuted) { music.muted = true; updateButton(); return; } music.play().then(() => { music.muted = false; updateButton(); }).catch(() => { music.muted = true; updateButton(); document.addEventListener('click', function firstClick() { if(!isMuted) { music.muted = false; music.play(); updateButton(); } document.removeEventListener('click', firstClick); }, {once: true}); }); }
+        tryPlay(); btn.addEventListener('click', function(e) { e.stopPropagation(); music.muted = !music.muted; isMuted = music.muted; localStorage.setItem('elanMusicMuted', isMuted); updateButton(); if(!music.muted && music.paused) music.play(); });
+    });
+    </script>
+</body>
+</html>

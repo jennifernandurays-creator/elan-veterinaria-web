@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+/*!
+ * Élan Veterinaria - Animate.css Custom
+ * Basado en animate.css pero modificado para ser único
+ * Animaciones suaves, profesionales y con carácter veterinario
+ */
+
+.animated {
+  animation-duration: 1.1s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animated.infinite {
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  animation-duration: 1.8s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  animation-duration: .8s;
+}
+
+/* ÉLAN - Rebote suave veterinario (antes era brusco) */
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transform: translate3d(0, -20px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0,-2px,0);
+  }
+}
+.bounce { animation-name: bounce; transform-origin: center bottom; }
+
+/* NUEVO - Huellita rebotando */
+@keyframes pawBounce {
+  0%, 100% { transform: scale(1) translateY(0); }
+  25% { transform: scale(1.05, 0.95) translateY(0); }
+  50% { transform: scale(0.95, 1.05) translateY(-12px); }
+  75% { transform: scale(1.02, 0.98) translateY(0); }
+}
+.pawBounce { animation-name: pawBounce; animation-duration: 1.2s; }
+
+/* ÉLAN - Pulso cardiaco veterinario (antes era simple) */
+@keyframes pulse {
+  from { transform: scale3d(1, 1, 1); }
+  14% { transform: scale3d(1.08, 1.08, 1.08); }
+  28% { transform: scale3d(1, 1, 1); }
+  42% { transform: scale3d(1.08, 1.08, 1.08); }
+  70% { transform: scale3d(1, 1, 1); }
+}
+.pulse { animation-name: pulse; animation-duration: 1.5s; }
+
+/* NUEVO - Latido de corazón */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.15); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.15); }
+  70% { transform: scale(1); }
+}
+.heartbeat { animation-name: heartbeat; animation-duration: 1.8s; }
+
+/* NUEVO - Flotar suave (para imágenes de mascotas) */
+@keyframes floatSoft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.floatSoft { animation-name: floatSoft; animation-duration: 3s; animation-timing-function: ease-in-out; }
+
+/* NUEVO - Colita moviéndose */
+@keyframes tailWag {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(8deg); }
+}
+.tailWag { animation-name: tailWag; animation-duration: 0.6s; transform-origin: bottom center; }
+
+@keyframes rubberBand {
+  from { transform: scale3d(1, 1, 1); }
+  30% { transform: scale3d(1.15, 0.75, 1); }
+  40% { transform: scale3d(0.75, 1.15, 1); }
+  50% { transform: scale3d(1.08, 0.92, 1); }
+  65% { transform: scale3d(.98, 1.02, 1); }
+  75% { transform: scale3d(1.02, .98, 1); }
+  to { transform: scale3d(1, 1, 1); }
+}
+.rubberBand { animation-name: rubberBand; }
+
+/* ÉLAN - Shake más suave */
+@keyframes shake {
+  from, to { transform: translate3d(0, 0, 0); }
+  10%, 30%, 50%, 70%, 90% { transform: translate3d(-5px, 0, 0); }
+  20%, 40%, 60%, 80% { transform: translate3d(5px, 0, 0); }
+}
+.shake { animation-name: shake; }
+
+@keyframes headShake {
+  0% { transform: translateX(0); }
+  6.5% { transform: translateX(-4px) rotateY(-6deg); }
+  18.5% { transform: translateX(3px) rotateY(5deg); }
+  31.5% { transform: translateX(-2px) rotateY(-3deg); }
+  43.5% { transform: translateX(1px) rotateY(2deg); }
+  50% { transform: translateX(0); }
+}
+.headShake { animation-timing-function: ease-in-out; animation-name: headShake; }
+
+@keyframes swing {
+  20% { transform: rotate3d(0, 0, 1, 8deg); }
+  40% { transform: rotate3d(0, 0, 1, -6deg); }
+  60% { transform: rotate3d(0, 0, 1, 3deg); }
+  80% { transform: rotate3d(0, 0, 1, -2deg); }
+  to { transform: rotate3d(0, 0, 1, 0deg); }
+}
+.swing { transform-origin: top center; animation-name: swing; }
+
+@keyframes tada {
+  from { transform: scale3d(1, 1, 1); }
+  10%, 20% { transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -2deg); }
+  30%, 50%, 70%, 90% { transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, 2deg); }
+  40%, 60%, 80% { transform: scale3d(1.05, 1.05, 1.05) rotate3d(0, 0, 1, -2deg); }
+  to { transform: scale3d(1, 1, 1); }
+}
+.tada { animation-name: tada; }
+
+@keyframes wobble {
+  from { transform: none; }
+  15% { transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg); }
+  30% { transform: translate3d(12%, 0, 0) rotate3d(0, 0, 1, 2deg); }
+  45% { transform: translate3d(-8%, 0, 0) rotate3d(0, 0, 1, -2deg); }
+  60% { transform: translate3d(6%, 0, 0) rotate3d(0, 0, 1, 1deg); }
+  75% { transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -1deg); }
+  to { transform: none; }
+}
+.wobble { animation-name: wobble; }
+
+/* Resto de animaciones base - suavizadas para veterinaria */
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to { animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  0% { opacity: 0; transform: scale3d(.4, .4, .4); }
+  20% { transform: scale3d(1.05, 1.05, 1.05); }
+  40% { transform: scale3d(.95, .95, .95); }
+  60% { opacity: 1; transform: scale3d(1.02, 1.02, 1.02); }
+  80% { transform: scale3d(.98, .98, .98); }
+  to { opacity: 1; transform: scale3d(1, 1, 1); }
+}
+.bounceIn { animation-name: bounceIn; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.fadeIn { animation-name: fadeIn; }
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translate3d(0, -40px, 0); }
+  to { opacity: 1; transform: none; }
+}
+.fadeInDown { animation-name: fadeInDown; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate3d(0, 40px, 0); }
+  to { opacity: 1; transform: none; }
+}
+.fadeInUp { animation-name: fadeInUp; }
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translate3d(-40px, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+.fadeInLeft { animation-name: fadeInLeft; }
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translate3d(40px, 0, 0); }
+  to { opacity: 1; transform: none; }
+}
+.fadeInRight { animation-name: fadeInRight; }
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale3d(.5, .5, .5); }
+  50% { opacity: 1; }
+}
+.zoomIn { animation-name: zoomIn; }
+
+@keyframes zoomInDown {
+  from { opacity: 0; transform: scale3d(.2, .2, .2) translate3d(0, -400px, 0); animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% { opacity: 1; transform: scale3d(.5, .5, .5) translate3d(0, 30px, 0); animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); }
+}
+.zoomInDown { animation-name: zoomInDown; }
+
+@keyframes slideInDown {
+  from { transform: translate3d(0, -30px, 0); visibility: visible; opacity: 0; }
+  to { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+.slideInDown { animation-name: slideInDown; }
+
+@keyframes slideInLeft {
+  from { transform: translate3d(-30px, 0, 0); visibility: visible; opacity: 0; }
+  to { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+.slideInLeft { animation-name: slideInLeft; }
+
+@keyframes slideInRight {
+  from { transform: translate3d(30px, 0, 0); visibility: visible; opacity: 0; }
+  to { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+.slideInRight { animation-name: slideInRight; }
+
+@keyframes slideInUp {
+  from { transform: translate3d(0, 30px, 0); visibility: visible; opacity: 0; }
+  to { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+.slideInUp { animation-name: slideInUp; }
+
+/* Élan - Delays más rápidos para veterinaria */
+.animated.delay-1s { animation-delay: 0.3s; }
+.animated.delay-2s { animation-delay: 0.6s; }
